@@ -31,6 +31,7 @@ p     : Paste yanked buffer
 /<keyword>    : search for <keyword>
 n             : Next search
 N             : Previous search word
+*             : search for word currently under cursor
 
 :%s/<keyword>/<replace>/        : Search and replace NO CONFIRMATION (ALL)
 :%s/<keyword>/<replace>/g       : Search and replace NO CONFIRMATION (ALL)
@@ -44,6 +45,7 @@ N             : Previous search word
 :set shiftwidth=2 : indenting is 2 spaces
 :set expandtab    : don't use actual tab character (ctrl-v)
 :set tabstop=2    : tabs are at proper location
+:set hlsearch     : search highlisting
 -----------------------------
 =============================
 This is a sample file for your practice your vim editor.
