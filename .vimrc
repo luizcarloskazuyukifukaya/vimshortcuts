@@ -12,6 +12,12 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set hlsearch                    "Search highlisting
+set ignorecase                  "Case insensitive search
+set smartcase                   " excep when using capital letters
+set ruler                       "Display cursor position on the last line of the screen or in the status line of a window
+set showmatch                   "Matching parentheses
+set cursorline
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -50,7 +56,8 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2       " tab stop 2
 set expandtab       " tab with space
-set hlsearch        " search highlisting
+
+" ================ Others ======================
 
 filetype plugin on
 filetype indent on
@@ -106,3 +113,5 @@ colorscheme koehler
 "colorscheme slate
 "colorscheme torte
 "colorscheme zellne
+
+set background=dark
