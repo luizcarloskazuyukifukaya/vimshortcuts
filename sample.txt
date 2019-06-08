@@ -36,13 +36,14 @@ N             : Previous search word
 :%s/<keyword>/<replace>/g       : Search and replace NO CONFIRMATION (ALL)
 :%s/<keyword>/<replace>/gc      : Search and replace with confirmation
 
-
-
 -----------------------------
 [SET MODE]
 -----------------------------
-:set number   : set line numbers
-
+:set number       : set line numbers
+:set autoindent   : turns it on
+:set shiftwidth=2 : indenting is 2 spaces
+:set expandtab    : don't use actual tab character (ctrl-v)
+:set tabstop=2    : tabs are at proper location
 -----------------------------
 =============================
 This is a sample file for your practice your vim editor.
