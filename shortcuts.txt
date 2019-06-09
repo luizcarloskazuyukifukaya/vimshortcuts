@@ -52,4 +52,16 @@ N             : Previous search word
 *****************************
 Command shortcuts
 *****************************
------------------------------
+^a		: Start of line
+^e		: End of line
+Option-<	: move one word back
+Option-> : move one word forward
+
+^l		: Clear screen
+
+^w		: Delete one word
+^y		: Cancel one word
+
+^k		: Delete all after the cursor
+^u		: Delete all before the cursor
+----------------------------
