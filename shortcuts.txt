@@ -1,9 +1,5 @@
-*****************************
-vim shortcuts
-*****************************
------------------------------
-Basic command to move:
------------------------------
+Wim shortcuts
+——————————————
 w    : move forward one Word
 b    : Backfoward one word
 $    : End of the line
@@ -11,8 +7,6 @@ $    : End of the line
 gg   : move to TOP
 G    : move to END
 
------------------------------
-[EDIT LINES]
 -----------------------------
 u     : Undo the last command
 ^r    : Re-undo (cancel undo)
@@ -28,30 +22,19 @@ yy    : Yank one line
 p     : Paste yanked buffer
 
 -----------------------------
-[SEARCH LINES]
------------------------------
 /<keyword>    : search for <keyword>
 n             : Next search
 N             : Previous search word
-*             : search for word currently under cursor
 
 :%s/<keyword>/<replace>/        : Search and replace NO CONFIRMATION (ALL)
 :%s/<keyword>/<replace>/g       : Search and replace NO CONFIRMATION (ALL)
 :%s/<keyword>/<replace>/gc      : Search and replace with confirmation
 
 -----------------------------
-[SET MODE]
------------------------------
-:set number       : set line numbers
-:set autoindent   : turns it on
-:set shiftwidth=2 : indenting is 2 spaces
-:set expandtab    : don't use actual tab character (ctrl-v)
-:set tabstop=2    : tabs are at proper location
-:set hlsearch     : search highlisting
-----------------------------
-*****************************
-Command shortcuts
-*****************************
+:set number   : set line numbers
+
+Cmd shortcuts
+——————————————
 ^a		: Start of line
 ^e		: End of line
 Option-<	: move one word back
@@ -64,4 +47,24 @@ Option-> : move one word forward
 
 ^k		: Delete all after the cursor
 ^u		: Delete all before the cursor
-----------------------------
+
+Chrome shortcuts
+——————————————
+^TAB	: Next TAB
+*TAB	: Select Window
+*w		: Close current TAB
+*+/-		: Change font size
+
+cVim shortcuts
+——————————————
+?	: Help
+H	:  go back in History
+L	: go forward in history
+
+t	: new Tab
+J	: Go one tab left
+K	: Go one tab right
+x	: close current tab
+
+yy 	: copy current URL to clipboard
+p      : Open the clipboard’s URL
