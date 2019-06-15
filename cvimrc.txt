@@ -34,10 +34,10 @@ let searchalias m = "moma"
 " qmarks
 " google                                               
 let qmark m = ["https://mail.google.com"]                                           
-let qmark t = ["https://mail.google.com/tasks/canvas"]                              
 let qmark c = ["https://www.google.com/calendar"]                                   
-let qmark l = ["http://www.google.com/language_tools"]
 let qmark k = ["https://keep.google.com"]
+let qmark p = ["https://console.cloud.google.com"]
+let qmark a = ["https://admin.google.com"]
 " Feedly/Pocket/GitHub
 "let qmark f = ["http://cloud.feedly.com/#latest"]                                   
 "let qmark p = ["http://getpocket.com/a/queue/"]                                     
