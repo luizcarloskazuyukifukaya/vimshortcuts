@@ -16,6 +16,21 @@ let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
 let barposition = "top"
 let completionengines = []
 
+" Default Search Engine
+let defaultengine = "google.co.jp"
+
+" Searchs Engine
+" Cloud Search
+let searchengine cloudsearch = "https://cloudsearch.google.com/cloudsearch/search?authuser=0&q=%s"
+" Amazon.co.jp
+let searchengine amazonjp = "https://www.amazon.co.jp/s/ref=nb_sb_noss_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%s"
+" MOMA
+let searchengine moma = "http://moma.corp.google.com/search?q=%s"
+
+let searchalias a = "amazonjp"
+let searchalias c = "cloudsearch"
+let searchalias m = "moma"
+
 " qmarks
 " google                                               
 let qmark m = ["https://mail.google.com"]                                           
