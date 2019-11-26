@@ -1,3 +1,8 @@
+"-----------------
+" Usage
+":help    -- call help
+":setting -- call settings
+
 "Settings
 "set nohud
 "set autohidecursor
@@ -16,10 +21,10 @@ let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
 let barposition = "top"
 let completionengines = []
 
-" Default Search Engine
+" Default Search Engine -- o|t searchword (o:current,t: new tab)
 let defaultengine = "google.co.jp"
 
-" Searchs Engine
+" Searchs Engine -- o|t{letter} searchword (o:current,t: new tab)
 " Cloud Search
 let searchengine cloudsearch = "https://cloudsearch.google.com/cloudsearch/search?authuser=0&q=%s"
 " Amazon.co.jp
@@ -31,7 +36,7 @@ let searchalias a = "amazonjp"
 let searchalias c = "cloudsearch"
 let searchalias m = "moma"
 
-" qmarks
+" qmarks -- go{letter} (current tab)| gn{letter} (new tan) | gw{letter} (new window)
 " google                                               
 let qmark m = ["https://mail.google.com"]                                           
 let qmark c = ["https://www.google.com/calendar"]                                   
@@ -62,10 +67,10 @@ map u lastClosedTab
 " Better to set in Keyboard shortcut than settings here.
 "map <C-w> nextTab -- removed to use <C-Tab> on all platforms and have <C-w> to align with chromebook default
 "map <C-p> previousTab -- removed to use <T-S-Tab> on all platforms
-map <C-i> goForward " equal to <A-{right arrow}>
-map <C-o> goBack    " equal to <A-{left arrow}>
+map <C-i> goForward " -- equal to <A-{right arrow}>
+map <C-o> goBack    " -- equal to <A-{left arrow}>
 
-map R reloadTabUncached
+map R reloadTabUncached " -- equal to r
 map w :new<Space>
 
 " Yank current url
