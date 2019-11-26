@@ -1,7 +1,7 @@
 "-----------------
 " Usage
-":help    -- call help
-":setting -- call settings
+":help     -- call help
+":settings -- call settings
 
 "Settings
 "set nohud
