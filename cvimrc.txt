@@ -60,10 +60,11 @@ map u lastClosedTab
 " (and  'Ctrl+P' to 'Go to the previous tab'). These settings are valid even in Windows.
 " And Keyboard shortcut settings are also valid in new tab or chrome's setting pages, in which extensions' settings are not valid.
 " Better to set in Keyboard shortcut than settings here.
-map <C-w> nextTab
-map <C-p> previousTab
-map <C-i> goForward
-map <C-o> goBack
+"map <C-w> nextTab -- removed to use <C-Tab> on all platforms and have <C-w> to align with chromebook default
+"map <C-p> previousTab -- removed to use <T-S-Tab> on all platforms
+map <C-i> goForward " equal to <A-{right arrow}>
+map <C-o> goBack    " equal to <A-{left arrow}>
+
 map R reloadTabUncached
 map w :new<Space>
 
