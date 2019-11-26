@@ -62,8 +62,8 @@ map u lastClosedTab
 " Better to set in Keyboard shortcut than settings here.
 map <C-w> nextTab
 map <C-p> previousTab
-map <C-f> goForward
-map <C-b> goBack
+map <C-i> goForward
+map <C-o> goBack
 map R reloadTabUncached
 map w :new<Space>
 
