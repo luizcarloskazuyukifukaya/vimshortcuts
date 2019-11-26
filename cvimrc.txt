@@ -1,3 +1,10 @@
+"---------------
+" Help
+" :help
+" Settings
+" :setting
+"---------------
+
 "Settings
 "set nohud
 "set autohidecursor
@@ -19,7 +26,7 @@ let completionengines = []
 " Default Search Engine
 let defaultengine = "google.co.jp"
 
-" Searchs Engine
+" Searchs Engine -- t{letter} searchword (search with {letter} in new tab) | o{letter} .. (current tab)
 " Cloud Search
 let searchengine cloudsearch = "https://cloudsearch.google.com/cloudsearch/search?authuser=0&q=%s"
 " Amazon.co.jp
@@ -31,7 +38,7 @@ let searchalias a = "amazonjp"
 let searchalias c = "cloudsearch"
 let searchalias m = "moma"
 
-" qmarks
+" qmarks -- go{letter} | gn{letter} | gw{letter} 
 " google                                               
 let qmark m = ["https://mail.google.com"]                                           
 let qmark c = ["https://www.google.com/calendar"]                                   
