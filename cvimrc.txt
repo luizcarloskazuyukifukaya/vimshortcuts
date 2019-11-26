@@ -38,10 +38,9 @@ let qmark c = ["https://www.google.com/calendar"]
 let qmark k = ["https://keep.google.com"]
 let qmark p = ["https://console.cloud.google.com"]
 let qmark a = ["https://admin.google.com"]
-" Feedly/Pocket/GitHub
-"let qmark f = ["http://cloud.feedly.com/#latest"]                                   
-"let qmark p = ["http://getpocket.com/a/queue/"]                                     
-"let qmark g = ["http://github.com/rcmdnk"]  
+
+"let qmark g = ["http://github.com/kazuyukif"]  
+let qmark g = ["http://www.google.com/"]
 
 " Move
 map <C-h> scrollLeft
@@ -50,11 +49,11 @@ map <C-k> scrollUp
 map <C-l> scrollRight
 map <C-u> scrollPageUp
 map <C-d> scrollPageDown
-map <C-b> scrollFullPageUp
-map <C-f> scrollFullPageDown
+"map <C-b> scrollFullPageUp
+"map <C-f> scrollFullPageDown
 
 " Navigation
-"map d closeTab
+map d closeTab
 map u lastClosedTab
 " <C-n> is originally "Open new window" in Windows and it cannot be mapped from this setting.
 " Go to Extensions page, and go Keyboard shortcut, then you can set 'Ctrl+N' to 'Go to the next tab'
@@ -63,8 +62,8 @@ map u lastClosedTab
 " Better to set in Keyboard shortcut than settings here.
 map <C-w> nextTab
 map <C-p> previousTab
-map <C-i> goForward
-map <C-o> goBack
+map <C-f> goForward
+map <C-b> goBack
 map R reloadTabUncached
 map w :new<Space>
 
