@@ -49,8 +49,8 @@ map <C-k> scrollUp
 map <C-l> scrollRight
 map <C-u> scrollPageUp
 map <C-d> scrollPageDown
-"map <C-b> scrollFullPageUp
-"map <C-f> scrollFullPageDown
+map <C-a> scrollFullPageUp
+map <C-e> scrollFullPageDown
 
 " Navigation
 map d closeTab
