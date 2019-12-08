@@ -3,24 +3,13 @@
 ":help     -- call help
 ":settings -- call settings
 
+"------------------------------
 "Settings
-"set nohud
-"set autohidecursor
-"set noinsertmappings
-set smoothscroll
-set autoupdategist
-set noautofocus
+"------------------------------
 
-"let scrollstep = 30
-let fullpagescrollpercent = 90
-"let blacklists = ["https://mail.google.com/*"]
-let blacklists = []
-let mapleader = ","
-"let locale = "jp"
-let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
-let barposition = "top"
-let completionengines = []
-
+"------------------------------
+"Search Engine
+"------------------------------
 " Default Search Engine -- o|t searchword (o:current,t: new tab)
 let defaultengine = "google.co.jp"
 
@@ -36,6 +25,9 @@ let searchalias a = "amazonjp"
 let searchalias c = "cloudsearch"
 let searchalias m = "moma"
 
+"------------------------------
+"Quick Marks
+"------------------------------
 " qmarks -- go{letter} (current tab)| gn{letter} (new tan) | gw{letter} (new window)
 " google                                               
 let qmark m = ["https://mail.google.com"]                                           
@@ -43,7 +35,6 @@ let qmark c = ["https://www.google.com/calendar"]
 let qmark k = ["https://keep.google.com"]
 let qmark p = ["https://console.cloud.google.com"]
 let qmark a = ["https://admin.google.com"]
-
 "let qmark g = ["http://github.com/kazuyukif"]  
 let qmark g = ["http://www.google.com/"]
 
@@ -70,20 +61,4 @@ map u lastClosedTab
 map <C-i> goForward " -- equal to <A-{right arrow}>
 map <C-o> goBack    " -- equal to <A-{left arrow}>
 
-map R reloadTabUncached " -- equal to r
-map w :new<Space>
-
-" Yank current url
-map y yankDocumentUrl
-
-" Yank current selected word and search it
-map <C-g> :execute vlhyP<CR>
-
-" Open command line with ;
-map ; :
-
-" Disable all mappings in Text boxes
-"iunmapAll
-imap <C-d> deleteFowardChar
-imap <A-a> selectAll
-imap <A-v> editWithVim
+map fff <ESC>
