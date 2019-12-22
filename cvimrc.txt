@@ -13,7 +13,7 @@ set noautofocus
 
 "let scrollstep = 30
 let fullpagescrollpercent = 90
-let blacklists = ["https://mail.google.com/*"]
+let blacklists = ["https://mail.google.com/*", "https://calendar.google.com/*"]
 "let blacklists = []
 let mapleader = ","
 "let locale = "jp"
