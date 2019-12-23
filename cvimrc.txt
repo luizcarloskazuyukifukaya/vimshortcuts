@@ -32,20 +32,26 @@ let searchengine amazonjp = "https://www.amazon.co.jp/s/ref=nb_sb_noss_1?__mk_ja
 " MOMA
 let searchengine moma = "http://moma.corp.google.com/search?q=%s"
 
+" ta keyword
 let searchalias a = "amazonjp"
+" tc keyword
 let searchalias c = "cloudsearch"
+" tm keyword
 let searchalias m = "moma"
 
 " qmarks -- go{letter} (current tab)| gn{letter} (new tab) | gw{letter} (new window)
-" google                                               
+" gnm - open gmail in new tab
 let qmark m = ["https://mail.google.com"]                                           
+" gnc - open calendar in new tab
 let qmark c = ["https://www.google.com/calendar"]                                   
+" gnk - open keep in new tab
 let qmark k = ["https://keep.google.com"]
+" gnp - open Phanteon in new tab
 let qmark p = ["https://console.cloud.google.com"]
+" gna - open admin.google.com in new tab
 let qmark a = ["https://admin.google.com"]
-
-"let qmark g = ["http://github.com/kazuyukif"]  
-let qmark g = ["http://www.google.com/"]
+" gng - open github in new tab
+let qmark g = ["http://github.com/kazuyukif"]
 
 " Move
 map <C-h> scrollLeft
