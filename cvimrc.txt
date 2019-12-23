@@ -36,7 +36,7 @@ let searchalias a = "amazonjp"
 let searchalias c = "cloudsearch"
 let searchalias m = "moma"
 
-" qmarks -- go{letter} (current tab)| gn{letter} (new tan) | gw{letter} (new window)
+" qmarks -- go{letter} (current tab)| gn{letter} (new tab) | gw{letter} (new window)
 " google                                               
 let qmark m = ["https://mail.google.com"]                                           
 let qmark c = ["https://www.google.com/calendar"]                                   
