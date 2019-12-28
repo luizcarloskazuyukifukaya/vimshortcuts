@@ -1,0 +1,95 @@
+"-----------------
+" Usage
+":help     -- call help
+":settings -- call settings
+
+"Settings
+"set nohud
+"set autohidecursor
+"set noinsertmappings
+set smoothscroll
+set autoupdategist
+set noautofocus
+
+"let scrollstep = 30
+let fullpagescrollpercent = 90
+let blacklists = ["https://mail.google.com/*", "https://calendar.google.com/*"]
+"let blacklists = []
+let mapleader = ","
+"let locale = "jp"
+let hintcharacters = "hjklasdfgyuiopqwertnmzxcvb"
+let barposition = "top"
+let completionengines = []
+
+" Default Search Engine -- o|t searchword (o:current,t: new tab)
+let defaultengine = "google.co.jp"
+
+" Searchs Engine -- o|t{letter} searchword (o:current,t: new tab)
+" Cloud Search
+let searchengine cloudsearch = "https://cloudsearch.google.com/cloudsearch/search?authuser=0&q=%s"
+" Amazon.co.jp
+let searchengine amazonjp = "https://www.amazon.co.jp/s/ref=nb_sb_noss_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%s"
+" MOMA
+let searchengine moma = "http://moma.corp.google.com/search?q=%s"
+
+" ta keyword
+let searchalias a = "amazonjp"
+" tc keyword
+let searchalias c = "cloudsearch"
+" tm keyword
+let searchalias m = "moma"
+
+" qmarks -- go{letter} (current tab)| gn{letter} (new tab) | gw{letter} (new window)
+" gnm - open gmail in new tab
+let qmark m = ["https://mail.google.com"]                                           
+" gnc - open calendar in new tab
+let qmark c = ["https://www.google.com/calendar"]                                   
+" gnk - open keep in new tab
+let qmark k = ["https://keep.google.com"]
+" gnp - open Phanteon in new tab
+let qmark p = ["https://console.cloud.google.com"]
+" gna - open admin.google.com in new tab
+let qmark a = ["https://admin.google.com"]
+" gng - open github in new tab
+let qmark g = ["http://github.com/kazuyukif"]
+
+" Move
+map <C-h> scrollLeft
+map <C-j> scrollDown
+map <C-k> scrollUp
+map <C-l> scrollRight
+map <C-u> scrollPageUp
+map <C-d> scrollPageDown
+map <C-b> scrollFullPageUp
+map <C-f> scrollFullPageDown
+
+" Navigation
+map d closeTab
+map u lastClosedTab
+" <C-n> is originally "Open new window" in Windows and it cannot be mapped from this setting.
+" Go to Extensions page, and go Keyboard shortcut, then you can set 'Ctrl+N' to 'Go to the next tab'
+" (and  'Ctrl+P' to 'Go to the previous tab'). These settings are valid even in Windows.
+" And Keyboard shortcut settings are also valid in new tab or chrome's setting pages, in which extensions' settings are not valid.
+" Better to set in Keyboard shortcut than settings here.
+"map <C-w> nextTab -- removed to use <C-Tab> on all platforms and have <C-w> to align with chromebook default
+"map <C-p> previousTab -- removed to use <T-S-Tab> on all platforms
+map <C-i> goForward " -- equal to <A-{right arrow}>
+map <C-o> goBack    " -- equal to <A-{left arrow}>
+
+map R reloadTabUncached " -- equal to r
+map w :new<Space>
+
+" Yank current url
+map y yankDocumentUrl
+
+" Yank current selected word and search it
+map <C-g> :execute vlhyP<CR>
+
+" Open command line with ;
+map ; :
+
+" Disable all mappings in Text boxes
+"iunmapAll
+imap <C-d> deleteFowardChar
+imap <A-a> selectAll
+imap <A-v> editWithVim

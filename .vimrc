@@ -115,9 +115,16 @@ colorscheme koehler
 "colorscheme zellne
 
 set background=dark
+<<<<<<< HEAD
 
 
 "-------------------------------------------------------
 " Key remap
 noremap fff <ESC>
 noremap! fff <ESC>
+=======
+"-------------------------------------------------------
+" Remap keys
+noremap! fff <ESC>
+"-------------------------------------------------------
+>>>>>>> origin/master
