@@ -115,3 +115,9 @@ colorscheme koehler
 "colorscheme zellne
 
 set background=dark
+
+
+"-------------------------------------------------------
+" Key remap
+noremap fff <ESC>
+noremap! fff <ESC>
