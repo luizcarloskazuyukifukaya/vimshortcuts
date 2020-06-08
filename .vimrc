@@ -141,15 +141,38 @@ call plug#begin('~/.vim/plugged')
 " vim-plug plugins should be listed between >> and <<
 ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 " vim-javascript
-Plug 'https://github.com/pangloss/vim-javascript.git'
+"Plug 'https://github.com/pangloss/vim-javascript.git'
 " vim-jsx
-Plug 'https://github.com/mxw/vim-jsx.git'
+"Plug 'https://github.com/mxw/vim-jsx.git'
+"----------------------------------
 " https://github.com/sheerun/vim-polyglot
+"----------------------------------
 Plug 'sheerun/vim-polyglot'
 
+"----------------------------------
+" https://github.com/ycm-core/YouCompleteMe
+"----------------------------------
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'Valloric/YouCompleteMe'
+"https://github.com/ycm-core/YouCompleteMe/issues/1751#issuecomment-530659596
+""I added this line in my .vimrc
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-
-
+"after installing it, I got error and what I did was
+" cd $HOME/.vim/plugged/YouCompleteMe and ran install.py myself. 
+"I ran python3 install.py --clang-completer --ts-completer
+"B
+"
+"----------------------------------
+" Coc.nvim
+" https://scrapbox.io/jiro4989/Vim%E3%81%AE%E8%A3%9C%E5%AE%8C%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3coc.nvim%E3%82%92%E5%B0%8E%E5%85%A5
+"
+" https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim
+"----------------------------------
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" For example, for generic web-development consider
+" :CocInstall coc-tsserver coc-json coc-html coc-css
+"
 
 
 "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
