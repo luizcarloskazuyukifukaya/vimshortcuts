@@ -161,7 +161,6 @@ Plug 'sheerun/vim-polyglot'
 "after installing it, I got error and what I did was
 " cd $HOME/.vim/plugged/YouCompleteMe and ran install.py myself. 
 "I ran python3 install.py --clang-completer --ts-completer
-"B
 "
 "----------------------------------
 " Coc.nvim
