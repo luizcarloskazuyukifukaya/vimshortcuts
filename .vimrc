@@ -17,7 +17,8 @@ set ignorecase                  "Case insensitive search
 set smartcase                   " excep when using capital letters
 set ruler                       "Display cursor position on the last line of the screen or in the status line of a window
 set showmatch                   "Matching parentheses
-set cursorline
+set cursorline                  " line indicator
+set cursorcolumn                " column indicator
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -116,7 +117,44 @@ colorscheme koehler
 
 set background=dark
 "-------------------------------------------------------
-" Key remap
-noremap fff <ESC>
+" Remap keys
 noremap! fff <ESC>
 "-------------------------------------------------------
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+
+set number relativenumber
+execute pathogen#infect()
+call pathogen#helptags()
+
+"========================================================
+" https://github.com/junegunn/vim-plug
+" vim-plug
+"-------------------------------------------------------
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+"-------------------------------------------------------
+" vim-plug plugins should be listed between >> and <<
+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+" vim-javascript
+Plug 'https://github.com/pangloss/vim-javascript.git'
+" vim-jsx
+Plug 'https://github.com/mxw/vim-jsx.git'
+" https://github.com/sheerun/vim-polyglot
+Plug 'sheerun/vim-polyglot'
+
+
+
+
+
+
+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+"-------------------------------------------------------
+" Initialize plugin system
+call plug#end()
+"========================================================
+
