@@ -172,7 +172,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " For example, for generic web-development consider
 " :CocInstall coc-tsserver coc-json coc-html coc-css
 "
+Plug 'plasticboy/vim-markdown'
+Plug 'Yggdroot/indentLine'
 
+" ALE
+Plug 'dense-analysis/ale'
+
+" https://medium.com/vim-drops/javascript-autocompletion-on-vim-4fea7f6934e2
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 
 "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 "-------------------------------------------------------
@@ -180,3 +187,28 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 "========================================================
 
+" AUTOCOMPLETION
+" https://medium.com/vim-drops/javascript-autocompletion-on-vim-4fea7f6934e2
+set omnifunc=syntaxcomplete#Complete
+
+" https://www.arthurkoziel.com/setting-up-vim-for-yaml/
+" Used by IndentLine plugin
+let g:indentLine_char = '⦙'
+set foldlevelstart=20
+" ALE configuration
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_text_changed = 'never'
+
+" https://www.narga.net/how-to-set-up-code-completion-for-vim/
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
