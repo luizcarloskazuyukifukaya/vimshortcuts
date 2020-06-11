@@ -1,6 +1,27 @@
 # vimshortcuts
 This is a memo for the shortcuts and useful information related to vim on Macbook.
 
+# Setup Instructions
+## VIM
+0. Prerequisites
+- NPM is required, so install Node.js first
+
+1. Install all VIM plugins
+- Copy .vimrm to the $HOME directory
+- Launch vim (by typing vim command on the terminal)
+- Execute vim command ":PlugInstall" to install the vim plugins with Plug-vim plugins manager
+
+2. Install NPM packages
+- npm install -g eslint
+- npm i -D prettier eslint-plugin-prettier eslint-config-prettier
+
+3. Configuration
+- Copy .eslintrc.js and .tern-project to $HOME
+
+## vimium
+https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en
+https://github.com/philc/vimium
+
 # References
 ## vimrc tips
 https://qiita.com/_snow_narcissus/items/f1633ecc40814acca4cf
@@ -11,3 +32,6 @@ https://timreynolds.org/2013/05/26/configuring-vim-on-mac-os-x/
 ##
 https://gist.github.com/joegoggins/8482408
 
+## Plugins
+https://qiita.com/mysticatea/items/f523dab04a25f617c87d
+https://medium.com/vim-drops/javascript-autocompletion-on-vim-4fea7f6934e2
