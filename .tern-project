@@ -7,7 +7,9 @@
     "underscore"
   ],
   "plugins": {
+    "requirejs": {},
     "node": {},
-    "esmodules": {}
+    "modules" : {},
+    "es_modules": {}
   }
 }

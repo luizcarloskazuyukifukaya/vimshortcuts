@@ -30,12 +30,11 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
 " ================ Turn Off Swap Files ==============
-
 set noswapfile
 set nobackup
 set nowb
@@ -49,7 +48,6 @@ set nowb
 "set undofile
 
 " ================ Indentation ======================
-
 set autoindent
 set smartindent
 set smarttab
@@ -59,7 +57,6 @@ set tabstop=2       " tab stop 2
 set expandtab       " tab with space
 
 " ================ Others ======================
-
 filetype plugin on
 filetype indent on
 
@@ -71,7 +68,6 @@ set wrap       "Wrap lines
 set linebreak    "Wrap lines at convenient points
 
 " ================ Completion =======================
-
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -86,7 +82,6 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
-
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
@@ -120,12 +115,13 @@ set background=dark
 " Remap keys
 noremap! fff <ESC>
 "-------------------------------------------------------
+
+" YAML tab settings
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Relative Number
 set number relativenumber
-"execute pathogen#infect()
-"call pathogen#helptags()
 
 "========================================================
 " https://github.com/junegunn/vim-plug
@@ -159,7 +155,7 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 "after installing it, I got error and what I did was
-" cd $HOME/.vim/plugged/YouCompleteMe and ran install.py myself. 
+" cd $HOME/.vim/plugged/YouCompleteMe and ran install.py myself.
 "I ran python3 install.py --clang-completer --ts-completer
 "
 "----------------------------------
@@ -175,10 +171,15 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'plasticboy/vim-markdown'
 Plug 'Yggdroot/indentLine'
 
-" ALE
+" Syntastic
+"Plug 'vim-syntastic/syntastic'
+" ALE (Asynchronous and better than Syntastic)
+" https://kuune.org/text/2017/07/23/how-to-lint-and-autoformat-with-ale/
 Plug 'dense-analysis/ale'
 
 " https://medium.com/vim-drops/javascript-autocompletion-on-vim-4fea7f6934e2
+" AUTOCOMPLETION for JavaScript
+" The supported libraries are defined on $HOME/.tern-project
 Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 
 "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -195,11 +196,48 @@ set omnifunc=syntaxcomplete#Complete
 " Used by IndentLine plugin
 let g:indentLine_char = '⦙'
 set foldlevelstart=20
+
 " ALE configuration
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
+"let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_echo_msg_format = '[%linter%]%code: %%s [%severity%]'
+"let g:ale_sign_error = '✘'
+"let g:ale_sign_warning = '⚠'
+" Never lint on text change. Only on save.
 let g:ale_lint_on_text_changed = 'never'
+" http://shiro-secret-base.com/?p=178
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
+" https://davidtranscend.com/blog/configure-eslint-prettier-vim/
+"highlight ALEErrorSign ctermbg=Red ctermfg=White
+highlight ALEErrorSign ctermbg=NONE ctermfg=Red
+"highlight ALEWarningSign ctermbg=DarkYellow ctermfg=White
+highlight ALEWarningSign ctermbg=NONE ctermfg=Yellow
+let g:ale_sign_error = "◉"
+let g:ale_sign_warning = "◉"
+
+" Enable/Disable highlight on linting text
+let g:ale_set_highlights = 1
+
+" Clear gutter background color
+highlight clear SignColumn
+"highlight SignColumn guibg=darkgrey
+
+" ALE Highlighting
+let g:ale_sign_highlight_linenrs = 1
+highlight ALEError ctermfg=white ctermbg=Red
+highlight ALEWarning ctermfg=Black ctermbg=Yellow
+
+" Effect not confirmed
+"let g:ale_statusline_format = ['%d error(s)', '%d warning(s)', 'OK']
+"let g:ale_warn_about_trailing_whitespace = 1
+
+"let g:ale_echo_cursor = 1
+"let g:ale_set_loclist =1
+"let g:ale_set_signs = 1
+"let g:ale_sign_column_always = 0
 
 " https://www.narga.net/how-to-set-up-code-completion-for-vim/
 inoremap <silent><expr> <TAB>
