@@ -14,6 +14,7 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 **2. Install NPM packages**
 > - npm install -g eslint
 > - npm i -D prettier eslint-plugin-prettier eslint-config-prettier
+> - npm install jquery
 
 **3. Configuration**
 - Copy .eslintrc.js and .tern-project to $HOME
