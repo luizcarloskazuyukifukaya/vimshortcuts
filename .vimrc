@@ -167,6 +167,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " For example, for generic web-development consider
 " :CocInstall coc-tsserver coc-json coc-html coc-css
+" :CocInstall coc-pairs
 "
 Plug 'plasticboy/vim-markdown'
 Plug 'Yggdroot/indentLine'

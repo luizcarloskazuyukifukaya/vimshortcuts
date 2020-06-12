@@ -11,7 +11,11 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 **1. Install all VIM plugins**
 - Copy .vimrm to the $HOME directory
 - Launch vim (by typing vim command on the terminal)
-- Execute vim command ":PlugInstall" to install the vim plugins with Plug-vim plugins manager
+- Execute the following command within vim to install the vim plugins with Plug-vim plugins manager
+> - :PlugInstall
+- Execute the following command within vim to install Coc.nvim extensions:
+> - :CocInstall coc-tsserver coc-json coc-html coc-css
+> - :CocInstall coc-pairs
 
 **2. Install NPM packages**
 > - npm install -g eslint
