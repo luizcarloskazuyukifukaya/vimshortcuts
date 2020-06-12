@@ -6,6 +6,7 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 **0. Prerequisites**
 - NPM is required, so install Node.js first
 > - npm init
+
 (note) package.json is created on $HOME
 
 **1. Install NPM packages**
@@ -14,6 +15,7 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 > - npm i -D prettier eslint-plugin-prettier eslint-config-prettier
 > - npm install --save-dev eslint-plugin-jquery
 > - npm install --save-dev jquery
+
 (note) compare the $HOME/package.json content with package.json (from the https://github.com/luizcarloskazuyukifukaya/vimshortcuts/) and make sure it matches.
 
 **2. Install all VIM plugins**
