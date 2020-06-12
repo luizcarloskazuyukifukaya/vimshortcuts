@@ -21,8 +21,7 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 **2. Install all VIM plugins**
 - Copy .vimrm to the $HOME directory
 - install plug.vim
-> - curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
->    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+> - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 - Launch vim (by typing vim command on the terminal)
 - Execute the following command within vim to install the vim plugins with Plug-vim plugins manager
 > - :PlugInstall
