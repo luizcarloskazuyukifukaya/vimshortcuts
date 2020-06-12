@@ -5,7 +5,7 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 ## VIM
 **0. Prerequisites**
 - NPM is required, so install Node.js first
-> npm init
+> - npm init
 - Copy package.json to $HOME
 
 **1. Install all VIM plugins**
@@ -14,10 +14,10 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 - Execute vim command ":PlugInstall" to install the vim plugins with Plug-vim plugins manager
 
 **2. Install NPM packages**
-> npm install -g eslint
-> npm install --save-dev eslint-config-google
-> npm i -D prettier eslint-plugin-prettier eslint-config-prettier
-> npm install --save-dev jquery
+> - npm install -g eslint
+> - npm install --save-dev eslint-config-google
+> - npm i -D prettier eslint-plugin-prettier eslint-config-prettier
+> - npm install --save-dev jquery
 
 **3. Configuration**
 - Copy .eslintrc.js and .tern-project to $HOME
