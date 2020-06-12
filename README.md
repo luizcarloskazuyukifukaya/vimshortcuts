@@ -12,6 +12,7 @@ This is a memo for the shortcuts and useful information related to vim on Macboo
 > - npm install -g eslint
 > - npm install --save-dev eslint-config-google
 > - npm i -D prettier eslint-plugin-prettier eslint-config-prettier
+> - npm install --save-dev eslint-plugin-jquery
 > - npm install --save-dev jquery
 
 **2. Install all VIM plugins**
