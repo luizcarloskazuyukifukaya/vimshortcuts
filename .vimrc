@@ -39,12 +39,9 @@ set nobackup
 set nowb
 
 " ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-" NOT WORKING: Didnt work when yanked right out of YADR
-"silent !mkdir ~/.vim/backups > /dev/null 2>&1
-"set undodir=~/.vim/backups
-"set undofile
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
 
 " ================ Indentation ======================
 set autoindent
@@ -182,6 +179,12 @@ Plug 'dense-analysis/ale'
 " The supported libraries are defined on $HOME/.tern-project
 Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 
+" Undotree
+Plug 'mbbill/undotree'
+
+" rg (grep)
+Plug 'jremmen/vim-ripgrep'
+
 "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 "-------------------------------------------------------
 " Initialize plugin system
@@ -250,3 +253,18 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+if executable('rg')
+  let g:rg_derive_root='true'
+endif
+
+" ================ LEADER SHORTCUT  ==================
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>ps :Rg<SPACE>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
