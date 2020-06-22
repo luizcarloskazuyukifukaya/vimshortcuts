@@ -185,6 +185,10 @@ Plug 'mbbill/undotree'
 " rg (grep)
 Plug 'jremmen/vim-ripgrep'
 
+" surround.vim
+" http://vimblog.hatenablog.com/entry/vim_plugin_surround_vim
+Plug 'tpope/vim-surround'
+
 "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 "-------------------------------------------------------
 " Initialize plugin system
