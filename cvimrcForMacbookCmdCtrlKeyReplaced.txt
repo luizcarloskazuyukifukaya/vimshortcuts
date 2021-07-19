@@ -17,7 +17,7 @@
 "set nohud
 "set autohidecursor
 "set noinsertmappings
-set smoothscroll
+"set smoothscroll
 set autoupdategist
 set noautofocus
 
@@ -64,10 +64,7 @@ let qmark a = ["https://admin.google.com"]
 let qmark g = ["http://github.com/kazuyukif"]
 
 " Move
-map <M-h> scrollLeft
-map <M-j> scrollDown
-map <M-k> scrollUp
-map <M-l> scrollRight
+https://github.com/luizcarloskazuyukifukaya/vimshortcuts/blob/master/cvimrcForMacbookCmdCtrlKeyReplaced.txtmap <M-h> scrollLeft
 map <M-u> scrollPageUp
 map <M-d> scrollPageDown
 map <M-b> scrollFullPageUp
