@@ -63,8 +63,9 @@ let qmark a = ["https://admin.google.com"]
 " gng - open github in new tab
 let qmark g = ["http://github.com/kazuyukif"]
 
-" Move
-https://github.com/luizcarloskazuyukifukaya/vimshortcuts/blob/master/cvimrcForMacbookCmdCtrlKeyReplaced.txtmap <M-h> scrollLeft
+" Move https://github.com/luizcarloskazuyukifukaya/vimshortcuts/blob/master/cvimrcForMacbookCmdCtrlKeyReplaced.txt
+
+map <M-h> scrollLeft
 map <M-u> scrollPageUp
 map <M-d> scrollPageDown
 map <M-b> scrollFullPageUp
